@@ -4,7 +4,7 @@
 a_list = [1, 2.0, 'a', True]
 b_list = [3, 2, 9, 4, 11]
 
-# 可以使用+号组合列表，*号重复列表
+# 列表脚本操作符：可以使用+号组合列表，*号重复列表
 print(a_list + a_list)
 print(a_list * 2)
 
@@ -32,3 +32,6 @@ print('降序排列：%s' % b_list)
 a_list.reverse()
 print('反转后的列表：%s' % a_list)
 
+# extend()函数，在列表末尾一次性追加另一个列表中的多个值
+a_list.extend(b_list)
+print("追加后的列表：",a_list)
