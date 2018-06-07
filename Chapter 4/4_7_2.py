@@ -34,4 +34,6 @@ print("\n4.遍历集合中的元素：\n set_2 =", end='')
 for data in set_2:
     print(data, end='\t')
 
-# 5.
+# 5.清空集合
+set_2.clear()
+print("\n\n5.清空集合中的元素 ：%s" % set_2)
