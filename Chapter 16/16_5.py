@@ -13,9 +13,9 @@ import base64
 zhihu_login_url = 'https://www.zhihu.com/signup'
 
 config = {
-    'appId': 'd4ed8d211abd4f20b329e0f55999173f',
-    'apiKey': 'Nk3RSGAh0gFEGdoFC7GYsaCQ',
-    'secretKey': '63TyYDkI5R0x21tDsCRbBoF8EEmiDfEd'
+    'appId': 'd4ed8d211abd4f20b3xxe0f55xxx173f',
+    'apiKey': 'Nk3RSGAh0gFEGdoFC7GxxaCQ',
+    'secretKey': '63TyYDkI5R0x21tDsCxxBoF8EEmiDfEd'
 }
 client = AipOcr(**config)
 
@@ -44,10 +44,10 @@ def auto_login():
                 signup_switch_bt.click()
                 # 输入用户名
             username_input = browser.find_element_by_xpath('//input[@name="username"]')
-            username_input.send_keys('779878443@qq.com')
+            username_input.send_keys('xx@qq.com')
             # 输入密码
             password_input = browser.find_element_by_xpath('//input[@name="password"]')
-            password_input.send_keys('zpj8800565')
+            password_input.send_keys('xxx')
             # 等待一会儿，等验证码刷出来
             time.sleep(5)
             # 判断是否包含英文字符验证码，是的话处理，否则跳出

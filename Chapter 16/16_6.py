@@ -20,9 +20,9 @@ bg_postion_regex = re.compile('position: (.*?)px (.*?)px;')
 def auto_login():
     # 输入账号密码
     input_user = browser.find_element_by_xpath('//input[@id="login-username"]')
-    input_user.send_keys("13798983314")
+    input_user.send_keys("xxx")
     input_passwd = browser.find_element_by_xpath('//input[@id="login-passwd"]')
-    input_passwd.send_keys("zpj12345")
+    input_passwd.send_keys("xxx")
     # 验证码自动验证
     location_lists = fetch_images()
     offset = (get_offset(restore_images(cut_image_file, location_lists[0]),
