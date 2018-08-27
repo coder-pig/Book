@@ -1,19 +1,34 @@
 """
-函数闭包代码示例
+迭代器使用示例
 """
+import sys
+
+a = [1, 2, 3, 4, 5]
+it1 = iter(a)
+print(type(it1))
 
 
-def outer(a):
-    b = 1
+# 直接遍历迭代器对象
+for x in it1:
+    print(x, end='\t')
+else:
+    print()
 
-    def inner():
-        print(a + b)
+# 每调用一次next向后访问一个元素，超过元素会报StopIteration异常
+it2 = iter(a)
+print(next(it2), end='\t')
+print(next(it2), end='\t')
+print(next(it2), end='\t')
+print(next(it2), end='\t')
+print(next(it2), end='\t')
+print()
 
-    return inner
+# 带异常捕获方法
+it3 = iter(a)
+while True:
+    try:
+        print(next(it3), end='\t')
+    except StopIteration:
+        sys.exit()
 
 
-if __name__ == '__main__':
-    test_1 = outer(2)
-    print(test_1.__closure__)
-    print(test_1.__closure__[0].cell_contents)
-    print(test_1.__closure__[1].cell_contents)

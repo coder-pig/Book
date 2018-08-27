@@ -1,18 +1,19 @@
 """
-可变参数代码示例
+函数闭包代码示例
 """
-def plus(*a):
-    result = 0
-    for b in a:
-        print(b, end='\t')
 
-def test(**a):
-    result = 0
-    for b in a:
-        print(b, end='\t')
+
+def outer(a):
+    b = 1
+
+    def inner():
+        print(a + b)
+
+    return inner
+
 
 if __name__ == '__main__':
-    a = [1, 2, 3, 4, 5]
-    test(a)
-    print()
-    plus(*a)
+    test_1 = outer(2)
+    print(test_1.__closure__)
+    print(test_1.__closure__[0].cell_contents)
+    print(test_1.__closure__[1].cell_contents)
