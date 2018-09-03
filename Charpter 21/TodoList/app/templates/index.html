@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+</head>
+
+<body>
+<div align="center">
+    <h2>TodoList</h2>
+    <br>
+    <form action="/add" method="post">
+        {{ form.todo }}&nbsp;{{ form.add }}
+    </form>
+
+    <br>
+    {% if todos %}
+        <table border="1" cellpadding="10" width="600" align="center">
+            <tr>
+                <th>id</th>
+                <th>内容</th>
+                <th>时间</th>
+                <th>状态</th>
+            </tr>
+            {% for todo in todos %}
+                <tr>
+                    <td>{{ todo._id }} </td>
+                    <td>{{ todo.content }}</td>
+                    <td>{{ todo.time }}</td>
+                    <td>
+                        {% if todo.status == 0 %}
+                            <a href="/done/{{ todo.id }}">未完成</a>
+                        {% else %}
+                            <a href="/nodone/{{ todo.id }}">完成</a>
+                        {% endif %}
+                        <a href="/delete/{{ todo.id }}">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</div>
+</body>
+</html>

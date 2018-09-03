@@ -7,13 +7,6 @@
 
 import scrapy
 
-
-class FirstspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
-
-
 class BcyItem(scrapy.Item):
     author = scrapy.Field()
     pic_url = scrapy.Field()

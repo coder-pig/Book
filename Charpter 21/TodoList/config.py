@@ -1,0 +1,4 @@
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://jay:zpj12345@localhost:3306/todo'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+SECRET_KEY = "jay"
+WTF_CSRF_ENABLED = False
