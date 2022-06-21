@@ -27,7 +27,7 @@ logger==1.4
 lxml==4.2.4
 MarkupSafe==1.0
 networkx==2.1
-numpy==1.15.1
+numpy==1.22.0
 parsel==1.5.0
 pbr==4.2.0
 Pillow==5.2.0
